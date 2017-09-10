@@ -89,7 +89,7 @@ class Application implements \ArrayAccess
     if (!$controllerName and $moduleName) {
       $controllerName = $moduleName;
     }
-    $controllerClass = "\\Sylight\\{$moduleName}\\Controller\\{$controllerName}Controller";
+    $controllerClass = "\\{$moduleName}\\Controller\\{$controllerName}Controller";
     
     $this->container["module_dir"] = $this->container["root_dir"]."/src/$moduleName";
     $controller = new $controllerClass($this, $request);
